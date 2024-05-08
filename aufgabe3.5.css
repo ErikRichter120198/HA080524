@@ -1,0 +1,14 @@
+/* Stil für den Button */
+#colorButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Übergangseffekt für die Hintergrundfarbe */
+}
+
+/* Stil für den Button beim Hovern */
+#colorButton:hover {
+    background-color: #ddd; /* Hintergrundfarbe beim Hovern */
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farbwechsel Button</title>
+    <style>
+        /* Stil für den Button */
+        #colorButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Übergangseffekt für die Hintergrundfarbe */
+        }
+
+        /* Stil für den Button beim Hovern */
+        #colorButton:hover {
+            background-color: #ddd; /* Hintergrundfarbe beim Hovern */
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton" onclick="changeColor()">Farbe ändern</button>
+
+    <script>
+        function changeColor() {
+            const button = document.getElementById('colorButton');
+            const randomColor = generateRandomColor();
+            button.style.backgroundColor = randomColor;
+        }
+
+        function generateRandomColor() {
+            // Generiere eine zufällige Farbe in Hexadezimal-Schreibweise
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
+
